@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Filmoteka.Domain.SeedWork
 {
-    public interface IAggregateRoot
+    public interface IRepository<T> where T : IAggregateRoot
     {
-
+        IUnitOfWork UnitOfWork { get; }
     }
 }
